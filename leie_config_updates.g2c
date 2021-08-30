@@ -1,0 +1,6 @@
+addDataSource LEIE
+
+templateAdd {"feature": "UPIN_NUMBER", "template": "global_id", "behavior": "F1", "comparison": "exact_comp"}
+
+save
+
