@@ -97,7 +97,3 @@ SSN. UPINs were assigned to physicians as well as certain non-physician practiti
 
 *Note: The Downloadable Database does not contain SSNs or EINs. Therefore, verification of specific individuals or entities through the use of the SSN or EIN must be done via the 
 Online Searchable Database.*
-
-
-
-
