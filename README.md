@@ -1,12 +1,16 @@
 # mapper-leie
 
+## :no_entry: Deprecated
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 ## Overview
 
-The U.S. Department of Health and Human Services, Office of Inspector General's List of Excluded Individuals/Entities (LEIE) provides information to the health care industry, 
+The U.S. Department of Health and Human Services, Office of Inspector General's List of Excluded Individuals/Entities (LEIE) provides information to the health care industry,
 patients and the public regarding individuals and entities currently excluded from participation in Medicare, Medicaid, and all other Federal health care programs.
 
-The [leie-mapper.py](leie_mapper.py) python script converts this list into a json file ready to load into Senzing.  This list is available to the public and can be 
-downloaded [here](https://oig.hhs.gov/exclusions/exclusions_list.asp).  
+The [leie-mapper.py](leie_mapper.py) python script converts this list into a json file ready to load into Senzing.  This list is available to the public and can be
+downloaded [here](https://oig.hhs.gov/exclusions/exclusions_list.asp).
 
 The list of exclusion types can be found [here](https://oig.hhs.gov/exclusions/authorities.asp) and their FAQ can be found [here](https://oig.hhs.gov/faqs/exclusions-faq.asp).
 
@@ -59,8 +63,8 @@ From your Senzing project directory:
 python3 G2ConfigTool.py <path-to-file>/leie_config_updates.g2c
 ```
 
-This will step you through the process of adding the data sources, features, attributes and any other settings needed to load this watch list data into 
-Senzing. After each command you will see a status message saying "success" or "already exists".  For instance, if you run the script twice, the second time through they will all 
+This will step you through the process of adding the data sources, features, attributes and any other settings needed to load this watch list data into
+Senzing. After each command you will see a status message saying "success" or "already exists".  For instance, if you run the script twice, the second time through they will all
 say "already exists" which is OK.
 
 ### Running the mapper
@@ -68,7 +72,7 @@ say "already exists" which is OK.
 Download the raw file from: [here](https://oig.hhs.gov/exclusions/exclusions_list.asp)
 
 There you can download the complete and updated list as well as monthly additions and reinstatements.  All 3 files have the same structure.  The full file is small enough that you
-can map and load the whole file every time and Senzing will not duplicate records.  But you do have the option of just loading the full file once and only applying the monthly 
+can map and load the whole file every time and Senzing will not duplicate records.  But you do have the option of just loading the full file once and only applying the monthly
 updates thereafter.
 
 Then run the mapper.  Example usage:
@@ -90,10 +94,11 @@ This data set currently only contains about 75k records and loads in just a few 
 ### Mapping other data sources
 
 While not required, look for the following identifiers in your other data sets:
-- NPI_NUMBER - The NPI (National Provider Identifier) has replaced the UPIN (see question below) as the unique number used to identify health care providers. The Centers for 
+
+- NPI_NUMBER - The NPI (National Provider Identifier) has replaced the UPIN (see question below) as the unique number used to identify health care providers. The Centers for
 Medicaid & Medicare Services first began assigning NPIs in 2006, and providers were required to use NPIs as of mid-2008.
 - UPIN_NUMBER - The UPIN (Unique Physician Identification Number) was established by the Centers for Medicare & Medicaid Services as a unique provider identifier in lieu of the
 SSN. UPINs were assigned to physicians as well as certain non-physician practitioners and medical group practices. CMS no longer maintains the UPIN registry.
 
-*Note: The Downloadable Database does not contain SSNs or EINs. Therefore, verification of specific individuals or entities through the use of the SSN or EIN must be done via the 
+*Note: The Downloadable Database does not contain SSNs or EINs. Therefore, verification of specific individuals or entities through the use of the SSN or EIN must be done via the
 Online Searchable Database.*
