@@ -11,6 +11,7 @@ disable=
     missing-function-docstring,
     missing-module-docstring,
     multiple-statements,
+    no-member,
     redefined-outer-name,
     too-many-branches,
     trailing-newlines,
